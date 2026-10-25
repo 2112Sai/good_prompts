@@ -1,0 +1,69 @@
+Reimagine the subject in the attached image as a stylized 3D character model for a Roblox game.
+
+Create ONE full-body character image only. Do not create a reference sheet, alternate views, detail panels, labels, or a background scene.
+
+THE MAIN CHANGE IS THE VISUAL STYLE
+Preserve the subject’s identity, but substantially rebuild its shapes, proportions, materials, and rendering so it looks like an actual stylized game model—not the original illustration with simpler shading.
+
+TARGET LOOK
+A chunky, deliberately simplified, low-to-mid-poly 3D character with toy-like construction and a strong silhouette, presented like a clean render of a character from a stylized Roblox action game.
+
+GEOMETRY AND PROPORTIONS
+- Build the body from broad, solid, clearly defined 3D masses.
+- Use chunky limbs, oversized hands or paws, simplified feet, and a bold head shape.
+- Simplify muscle anatomy into large forms rather than individually defined muscles.
+- Use angular or gently beveled shapes with some visible planar surfaces.
+- Turn fur, hair, feathers, or similar textures into a small number of large sculpted clumps.
+- Give small features enough thickness to read as actual modeled geometry.
+- Keep the subject’s essential anatomy, including its original number of limbs.
+- Do not force a nonhuman creature into a standard block-avatar body.
+
+SURFACE AND MATERIALS
+- Use mostly flat colors and simple matte materials.
+- Keep surface texture minimal.
+- Remove individual hair strands, pores, gritty surface noise, and photorealistic wear.
+- Reduce scars, seams, markings, and wrinkles to a few bold, clean shapes.
+- Simplify accessories into chunky modeled pieces.
+- Use restrained glow only where the original design calls for it.
+
+RENDERING
+- Fully three-dimensional appearance.
+- Simple game-engine-style lighting.
+- Clear separation between major forms.
+- Keep shading and self-shadowing on the character to communicate depth.
+- No drawn outlines, sketch strokes, crosshatching, or painterly brushwork.
+- No cinematic realism or highly detailed fantasy rendering.
+- Keep the entire character visible in a clear, readable pose.
+
+PRESERVE
+- Retain the original subject’s recognizable silhouette, main colors, expression, signature accessories, and defining features.
+- Preserve intentional asymmetry, keeping features on the same anatomical sides as in the reference.
+- Do not add unrelated equipment, extra limbs, or new character features.
+- When a detail conflicts with the target style, preserve the idea behind it but redesign its execution as simple, chunky geometry.
+
+BACKGROUND AND OUTPUT — REQUIRED
+- Output a PNG with a true transparent background using an alpha channel.
+- Render only the character and its intended accessories.
+- Everything outside the character’s silhouette must be fully transparent.
+- Open spaces between limbs, beneath the arms, and between separated parts must also be transparent.
+- No background color, gradient, environment, floor, platform, backdrop, or scenery.
+- No ground shadow, contact-shadow patch, or cast shadow outside the character.
+- Do not draw a checkerboard pattern to represent transparency.
+- Do not simulate transparency with a white, gray, black, or solid-colored background.
+- Keep the character’s solid surfaces opaque; background transparency must not make the character itself translucent.
+- Keep silhouette edges clean, without white or colored halos.
+- Leave a small transparent margin around the entire character.
+- Do not crop the head, ears, hair, limbs, claws, feet, accessories, or other silhouette features.
+
+IMPORTANT
+Do not merely make the original image smoother, cuter, or less detailed.
+Change its visual construction so it convincingly looks like a stylized 3D Roblox game asset.
+
+Prioritize in this order:
+1. Clearly transformed stylized 3D game-model appearance.
+2. Recognizable character identity.
+3. Essential accessories and markings.
+4. Minor surface details.
+
+FINAL OUTPUT
+Output only the transformed full-body character as a transparent-background PNG with a true alpha channel—not an explanation, a mockup, or an image of the character against a background.
