@@ -1,0 +1,942 @@
+Build a working, interactive, fully 3D character showcase from the attached character specification sheet.
+
+Use plain Three.js with JavaScript ES modules unless the existing project requires another setup.
+
+Construct the character procedurally in code, with actual volumetric geometry, articulated joints, intentional attack choreography, motion effects, and a lively idle.
+
+Deliver runnable source code and an interactive scene—not a screenshot, prerecorded render, written plan, or image-based imitation of a 3D model.
+
+==================================================
+1. SOURCE AUTHORITY AND ANATOMY
+==================================================
+
+The attached character sheet is the visual authority for:
+- Anatomy.
+- Limb count.
+- Limb attachment locations.
+- Proportions.
+- Silhouette.
+- Colors and materials.
+- Accessories.
+- Markings.
+- Intentional asymmetry.
+- Attack studies.
+
+DO NOT assume a standard humanoid body.
+
+“Bipedal” means the character stands on two legs. It does NOT mean the character has only two arms.
+
+The character may have:
+- Two arms.
+- Four arms.
+- Six arms.
+- Additional appendages.
+- Nonhuman hands or feet.
+- Unusual joint placement.
+- Plantigrade, digitigrade, or other leg structures.
+
+Build what the reference actually specifies.
+
+ANATOMY MANIFEST
+Before constructing geometry, create a concise anatomy manifest in the project configuration:
+- Head count.
+- Arm count and names.
+- Leg count and names.
+- Additional appendages.
+- Shoulder/root attachment positions.
+- Hand or paw structure.
+- Digit count where visible or specified.
+- Important anatomical left/right asymmetry.
+- Source evidence for any unusual anatomy.
+
+Do not silently reduce limb count to fit a simpler rig.
+
+REFERENCE CONFLICTS
+Inspect the main image, orthographic views, labels, and component studies together.
+
+If sources conflict in a way that changes anatomy—for example:
+- Main image appears to have two arms.
+- Another view shows four.
+- Labels describe six arm joints.
+
+Do not automatically interpret joint numbers as limb count.
+Do not automatically trust the easiest view.
+Do not silently choose two, four, or six arms.
+
+Ask one focused clarification question if clarification is possible.
+
+If an autonomous run requires proceeding without a reply:
+- State the conflict.
+- Choose the interpretation best supported by the combined visual evidence.
+- Record that assumption in the configuration and delivery notes.
+- Keep limb count and placement configurable so the decision can be changed without rewriting the project.
+
+Once anatomy is established, use the same manifest throughout the entire implementation.
+
+==================================================
+2. ACTUAL 3D REQUIREMENTS
+==================================================
+
+Construct the character from real procedural meshes.
+
+Do NOT use:
+- A flat character image.
+- A billboard or sprite for the body.
+- Image planes arranged to imitate a character.
+- Layered cutouts as the primary model.
+- A prerecorded animation.
+- A downloaded character model as a substitute for construction.
+
+The character must have meaningful volume and recognizable anatomy from:
+- Front.
+- Side.
+- Back.
+- Three-quarter.
+- Above and below where reasonable.
+
+Sprites, particles, ribbons, and flat geometry are allowed for appropriate secondary visual effects.
+
+Clearly separate those effects from the character’s structural geometry.
+
+Do not hide missing rear anatomy or incomplete construction with camera restrictions.
+
+==================================================
+3. DELIVERABLE AND PROJECT STRUCTURE
+==================================================
+
+Create an actual runnable Three.js project.
+
+If working in an existing starter project:
+- Inspect it first.
+- Reuse its working renderer, dependency setup, and application shell where appropriate.
+- Do not overwrite unrelated functionality.
+- Do not assume a starter filename exists unless it is actually present.
+
+For a new project, provide a minimal browser entry point and a clear launch method.
+
+Suggested structure:
+
+index.html
+main.js
+
+character/
+  config.js
+  geometry.js
+  materials.js
+  character.js
+  rig.js
+  effects.js
+  debug.js
+  showcase.js
+
+Equivalent organization is acceptable.
+
+Responsibilities:
+- config.js: anatomy manifest, dimensions, materials, animation and effect settings.
+- geometry.js: reusable procedural shape builders.
+- materials.js: shared materials and palette.
+- character.js: mesh construction and articulated hierarchy.
+- rig.js: pose evaluation, joint controls, blending and animation.
+- effects.js: trails, afterimages, particles, breath and impacts.
+- debug.js: axes, joint helpers and orientation inspection.
+- showcase.js: state machine, camera, controls and update orchestration.
+
+Use consistent imports and one consistent dependency version.
+
+If this environment only supports a single JavaScript file, keep equivalent sections clearly organized within that file.
+
+Do not stop after producing a scaffold.
+
+==================================================
+4. SINGLE SOURCE OF TRUTH FOR LIMBS
+==================================================
+
+Do not hardcode anatomy separately in multiple files.
+
+Create one configured limb registry and build runtime rig references from it.
+
+Each arm entry should define, as applicable:
+- Stable ID.
+- Anatomical side.
+- Pair or tier.
+- Parent body region.
+- Attachment position.
+- Rest orientation.
+- Upper-arm length.
+- Forearm length.
+- Hand size.
+- Joint limits.
+- Animation role.
+- Effect attachment points.
+
+Example naming:
+- leftUpper / rightUpper.
+- leftLower / rightLower.
+- Additional pairs as required.
+
+These are examples, not mandatory limb counts.
+
+The following systems must iterate over the configured/runtime limb registry:
+- Character construction.
+- Pose evaluation.
+- Idle animation.
+- Attack animation.
+- Debug helpers.
+- Hand-orientation checks.
+- Motion-trail emitters.
+- Afterimage generation.
+- Any character export functionality.
+
+Do not assume the only arm IDs are L and R.
+
+Use per-limb dimensions and attachment transforms.
+Do not use one global arm configuration if different pairs have different proportions.
+
+CONFIGURATION CHANGES
+When changing a configuration schema:
+- Update every consumer in the same change.
+- Remove obsolete reads.
+- Validate required fields.
+- Do not leave the project in a state where one file expects dims.arm while another provides dims.arms.
+
+At startup, assert that:
+- Every configured limb has a constructed chain.
+- Every animated limb has valid joint references.
+- Required dimensions exist.
+- No transform contains undefined or non-finite values.
+
+Fail with a useful diagnostic instead of a blank scene.
+
+==================================================
+5. BUILD PRIORITIES
+==================================================
+
+Build in this order:
+1. Anatomy manifest and configuration.
+2. Overall proportions and silhouette.
+3. Joint positions and local coordinate conventions.
+4. Anatomically coherent hands, feet, and limb orientation.
+5. Pose testing with simple geometry.
+6. Recognizable face and accessories.
+7. Surface detail.
+8. Finished choreography and contact validation.
+9. Effects.
+10. Presentation and interface polish.
+
+Do not spend most of the implementation on UI while leaving the character as a crude placeholder.
+
+Do not hide incorrect anatomy behind particles, bloom, darkness, or camera placement.
+
+==================================================
+6. COORDINATES AND TRANSFORMS
+==================================================
+
+Use a documented character coordinate system:
+- +Y is up.
+- +Z is character forward.
+- +X is character anatomical left.
+
+Name left/right from the CHARACTER’S perspective.
+
+For each articulated joint, define:
+- Rest transform.
+- Local axes.
+- Intended bending axis.
+- Rotational limits.
+
+Keep geometry-orientation offsets separate from animation pivots.
+
+A mesh’s initial orientation must not silently change what an elbow or wrist control does.
+
+Use semantic controls such as:
+- shoulderRaise.
+- shoulderForward.
+- upperArmTwist.
+- elbowFlex.
+- forearmTwist.
+- wristFlex.
+- wristDeviation.
+
+Do not animate arbitrary rotation components without documenting their meaning.
+
+Store stable rest transforms.
+Evaluate animation from rest data rather than accumulating rotations each frame.
+
+==================================================
+7. PROCEDURAL GEOMETRY
+==================================================
+
+Use primitives for broad masses, then improve important shapes with custom geometry.
+
+Useful geometry builders may include:
+- Shaped or faceted body masses.
+- Tapered limb segments.
+- Curved tapered tubes.
+- Claws, horns, straps and scars.
+- Directional fur clumps.
+- Fitted accessory forms.
+
+Do not use random surface noise as a substitute for anatomical shaping.
+
+Requirements:
+- Coherent silhouettes from every major angle.
+- Deliberately tapered limbs.
+- Recognizable torso, shoulders, pelvis and head.
+- Joint transitions that do not look accidentally assembled.
+- No finished character made only from disconnected spheres and cylinders.
+- Pivots at actual joint centers.
+- Rear and hidden surfaces modeled.
+- No major floating accessories.
+- No obvious gaps during ordinary movement.
+
+Use shared geometry, instancing, or merged static details where appropriate.
+
+Do not merge independently animated parts into one immovable mesh.
+
+==================================================
+8. ARM CONSTRUCTION
+==================================================
+
+For EVERY arm, create independently controlled equivalents of:
+
+Parent torso region
+→ shoulder/clavicle pivot
+→ upper-arm swing
+→ upper-arm twist
+→ elbow flexion
+→ forearm
+→ forearm twist
+→ wrist
+→ hand/paw
+→ fingers/claws where appropriate
+
+Requirements:
+- Elbows bend predominantly as hinges.
+- Forearm twist rotates around the forearm’s longitudinal axis.
+- Palm orientation can change without changing elbow flexion.
+- Wrist flexion is distinct from forearm twist.
+- Shoulder movement contributes to reaching.
+- No abrupt joint flips or visible hyperextension.
+
+For multiple arm pairs:
+- Use separate attachment levels and appropriate spacing.
+- Keep all chains functional.
+- Do not treat secondary arms as decorative copies.
+- Choreograph clearance between pairs.
+- Adjust each pair’s motion to its attachment and proportions.
+
+A transform-based articulated rig is acceptable.
+Do not describe it as a skinned rig unless skinning is implemented.
+
+==================================================
+9. HANDS, PAWS, AND CONTACT ORIENTATION
+==================================================
+
+Treat hand construction and orientation as first-class requirements.
+
+For each hand/paw, define local reference directions:
+- Palm normal.
+- Digit direction.
+- Thumb-side direction, where applicable.
+
+Keep these references attached to the hand for world-space inspection.
+
+Model:
+- Distinguishable palm/pad and dorsal/back surfaces.
+- Clear wrist connection.
+- Reference-appropriate digit count.
+- Correct thumb placement, if present.
+- Fingers/claws emerging from the correct locations.
+- Correct claw curvature and tip direction.
+
+Do not:
+- Put claws on the back of the hand.
+- Reverse claw curvature accidentally.
+- Duplicate a left hand unchanged to create a right hand.
+- Mirror geometry in a way that breaks normals or control directions.
+
+NEUTRAL ORIENTATION
+Unless the sheet specifies otherwise:
+- Main arms rest beside the torso.
+- Elbows are relaxed.
+- Palms generally face inward toward the body.
+- Thumbs generally face forward.
+- Wrists are neutral.
+- Digits are relaxed.
+
+For extra arm pairs, use a comfortable neutral orientation with clear separation from adjacent limbs.
+
+Do not force every arm into an identical pose if attachment geometry makes that implausible.
+
+==================================================
+10. LEGS AND FEET
+==================================================
+
+- Match the reference’s leg structure.
+- Preserve plantigrade, digitigrade, hoofed or other anatomy.
+- Do not impose human legs on a creature by default.
+- Place hips, knees, ankles and feet coherently.
+- Bend joints in their intended directions.
+- Keep feet aligned and supporting the stance.
+- Avoid feet sliding through the floor.
+- During grounded movement, maintain foot placement through a suitable solver or authored compensation.
+
+Do not rotate an entire foot block arbitrarily to disguise missing ankle structure.
+
+==================================================
+11. HEAD, SURFACES, AND MATERIALS
+==================================================
+
+HEAD
+- Prioritize skull, muzzle, brow, jaw, ears and eye placement.
+- Seat eyes in the head.
+- Place an animated jaw pivot near its actual attachment.
+- Preserve asymmetrical accessories.
+- Provide mouth/nostril anchors for breath effects.
+
+FUR / HAIR
+- Use broad shaped clumps following directional flow.
+- Concentrate detail on identifying features and silhouette breaks.
+- Do not uniformly cover the model in random spikes.
+- Keep joints readable.
+
+SKIN / MARKINGS
+- Preserve scars, folds, markings and material transitions.
+- Keep details attached to their parent body regions.
+- Avoid floating details and z-fighting.
+- Do not add photorealistic pores or unrelated texture.
+
+MATERIALS
+Differentiate relevant:
+- Skin or fur.
+- Cloth.
+- Leather.
+- Metal.
+- Claws, teeth and horns.
+- Eyes and emissive accents.
+
+Match the reference palette.
+Use appropriate roughness and restrained highlights.
+
+Model wraps around limbs rather than as floating rings.
+
+==================================================
+12. SCALE
+==================================================
+
+Use dimensions explicitly provided by the reference or user.
+
+If none are provided, use a clearly identified default:
+- Character standing height: 12.5 scene units.
+- One scene unit represents one Roblox stud.
+- Optional player reference: 5 units.
+- Height ratio: 2.5×.
+
+Preserve proportions and scale the complete character consistently.
+Do not stretch individual regions to force the final height.
+
+==================================================
+13. ATTACK SELECTION
+==================================================
+
+Choose ONE clearly defined primary attack.
+
+Priority:
+1. Explicit user instruction.
+2. Reference attack study.
+3. Anatomy-appropriate fallback.
+
+Possible attacks:
+- Claw swipe.
+- Punch.
+- Palm/paw strike.
+- Downward slam.
+- Weapon attack, only with an existing weapon.
+
+Do not leave the implementation as an ambiguous “slam or swipe.”
+
+Fallback:
+- Clawed/agile character: diagonal swipe.
+- Unarmed humanoid fighter: punch.
+- Clearly heavy ground-oriented character: ground slam may be selected.
+- Weapon user: appropriate weapon strike.
+
+Select for the character, not for the easiest effects.
+
+Define:
+- Attacking limbs.
+- Supporting limbs.
+- Target region.
+- Contact point or active strike interval.
+- Whether a real collision occurs or this is an air attack.
+- Leading striking feature.
+
+For multiple arms:
+- Give each arm an intentional role.
+- Use coordinated or staggered timing where appropriate.
+- Supporting arms may guard, brace or counterbalance.
+- Do not swing every arm identically.
+- Do not allow unused arms to freeze unnaturally.
+
+==================================================
+14. CONTACT MECHANICS
+==================================================
+
+CLAW SWIPE
+- Claw tips and raking edges lead.
+- Digits are posed to rake.
+- The back of the hand must not accidentally become the striking surface.
+- Orient the palm appropriately through the arc rather than fixing it forward.
+
+PUNCH
+- Knuckles lead.
+- Wrist aligns with the forearm.
+- Do not strike palm-first or wrist-first.
+
+PALM / PAW STRIKE
+- Palm or paw-pad surface leads.
+- Palm normal faces the target at contact.
+- Avoid an unsupported, sharply folded wrist.
+
+SLAM
+- Explicitly choose pad-first or fist-first.
+- Establish that orientation before impact.
+- Do not let the hand’s back become the default contact surface.
+- Contact the ground without visibly burying the limb.
+
+WEAPON
+- Maintain a believable grip.
+- Lead with the appropriate edge or tip.
+- Keep the weapon attached correctly.
+
+==================================================
+15. AUTHORED CHOREOGRAPHY
+==================================================
+
+Create key poses for:
+1. Neutral.
+2. Anticipation.
+3. Wind-up.
+4. Acceleration/contact.
+5. Follow-through.
+6. Recovery.
+
+Each pose defines:
+- Torso orientation.
+- Shoulder motion.
+- Elbow flexion.
+- Forearm twist.
+- Wrist orientation.
+- Digit pose.
+- Contact feature.
+- Foot support.
+- Roles of other limbs.
+
+Animate hand orientation as deliberately as its position.
+
+Use:
+- Readable anticipation.
+- Fast active motion.
+- Weighted follow-through.
+- Deliberate recovery.
+
+Do not use identical timing or easing for every phase.
+
+DEFAULT SWIPE
+When appropriate:
+- Shift weight and rotate the torso.
+- Raise the attacking arm high and outward.
+- Keep nonattacking limbs clear.
+- Sweep diagonally through the forward target region.
+- Lead with claws.
+- Follow through without penetrating the torso.
+- Return smoothly to neutral.
+
+==================================================
+16. ANIMATION SYSTEM
+==================================================
+
+- Use time-based playback independent of frame rate.
+- Evaluate from stable rest transforms.
+- Blend poses smoothly.
+- Use suitable quaternion interpolation for multi-axis rotations.
+- Prevent unwanted full rotations and joint flips.
+- Coordinate idle, deep breath and attack states.
+- Attack once, then return to idle.
+- Provide optional repeat mode.
+- Use phase events for effects.
+- Prevent duplicate contact triggers.
+- Reset event state between repeats.
+
+==================================================
+17. IDLE AND DEEP BREATH
+==================================================
+
+NORMAL IDLE
+- Subtle breathing.
+- Small head and shoulder adjustments.
+- Slight weight settling.
+- Relaxed hands.
+- Stable feet.
+- Restrained secondary motion in appropriate accessories or major fur forms.
+
+No floating, exaggerated bouncing, joint separation or whole-character rotation masquerading as internal movement.
+
+DEEP BREATH
+Approximately every 10–15 seconds while idle:
+1. Small preparation.
+2. Deeper inhale.
+3. Slight chest expansion and shoulder rise.
+4. Brief natural pause.
+5. Heavy exhale and settling.
+6. Return to normal idle.
+
+Distribute movement across chest, shoulders, neck and posture.
+Do not uniformly inflate the entire character.
+
+Add a brief visible exhale where appropriate:
+- Mouth or nostril emitter.
+- Correct attachment to head movement.
+- Localized and short-lived.
+- Neutral vapor or air disturbance by default.
+- No automatic fire or magic.
+
+For existing emissive features:
+- Slightly build intensity during inhale.
+- Settle during exhale.
+
+Do not invent emission on non-emissive characters.
+
+Blend out of the breath smoothly when an attack begins.
+
+==================================================
+18. EFFECTS DIRECTION
+==================================================
+
+Attack intensity: approximately 3–4 out of 5.
+Idle intensity: substantially quieter.
+
+Default to physical:
+- Weight.
+- Air displacement.
+- Motion trails.
+- Brief afterimages.
+- Dust.
+- Debris.
+- Localized impact energy.
+
+Anime-inspired motion exaggeration is allowed.
+
+Elemental or supernatural effects require reference support.
+Glowing eyes alone do not establish elemental powers.
+
+Keep palettes source-appropriate:
+- Dust/debris match the ground.
+- Motion effects use neutral or restrained character-related colors.
+- Emissive effects match established emission.
+
+Do not turn every effect into the same neon color.
+
+==================================================
+19. TRAILS AND AFTERIMAGES
+==================================================
+
+MOTION TRAIL
+- Follow the actual fist, claw tips or weapon edge.
+- Sample world-space positions after joint transforms update.
+- Build a short tapered trail from recent movement.
+- Activate during acceleration.
+- Fade through follow-through.
+- Keep it behind the movement.
+- Make it read primarily as speed.
+- Reset between attacks.
+- Avoid permanent ribbons and connections across pose resets.
+
+AFTERIMAGES
+- Use a few previous hand/forearm poses.
+- Preserve their earlier world position and orientation.
+- Detach snapshots from subsequent live-limb movement.
+- Fade quickly.
+- Keep them less opaque than the real limb.
+- Avoid expensive full-character duplication.
+- Do not make them resemble permanent extra limbs.
+
+For multi-arm characters, assign trails only to relevant striking limbs and keep the combined result readable.
+
+==================================================
+20. GROUND IMPACTS
+==================================================
+
+STRICT RULE
+Ground effects occur only when an attack actually hits the ground.
+
+Air punches and swipes do not create:
+- Ground cracks.
+- Ground-centered shockwaves.
+- Ground debris.
+- Dust eruptions from an untouched floor.
+
+Air attacks may have motion effects without fake collision effects.
+
+GROUND SLAM PACKAGE
+If a slam is selected:
+- Strong anticipation.
+- Fast downward acceleration.
+- Correct striking surface.
+- Heavy contact pose.
+- Brief compression/settling.
+- Weighted recovery.
+
+At contact:
+- Expanding ground-hugging shockwave.
+- Dust plume.
+- Controlled flying debris.
+- Temporary cracks.
+- Brief localized flash.
+- Short damped camera shake.
+
+Coordinate timing:
+- Flash and initial burst at contact.
+- Shockwave immediately afterward.
+- Dust develops and settles.
+- Debris rises, falls and disappears.
+- Cracks fade.
+- Recovery continues during effect decay.
+
+Keep:
+- Limbs and torso readable.
+- Cracks on the floor.
+- Debris originating at the contact region.
+- Ground materials consistent.
+- Effect populations bounded.
+
+No full-screen flash or permanent accumulation.
+
+==================================================
+21. EYES AND AMBIENCE
+==================================================
+
+EYES
+Where supported:
+- Actual 3D eye features.
+- Correct color and asymmetry.
+- Readable luminous center.
+- Restrained bloom.
+- Slow idle variation.
+- Brief anticipation accent.
+- Correct attachment during movement.
+
+Do not illuminate hidden eyes or eyepatches.
+Do not wash out the face.
+
+AMBIENCE
+Choose a cohesive subset of:
+- Sparse floating particles.
+- Thin ground haze.
+- Accessory/fur secondary movement.
+- Pulsing established emissive features.
+- Embers/sparks where supported.
+- Faint aura only where supernatural design supports it.
+
+Do not activate every effect by default.
+
+Keep particles sparse near the face.
+Keep feet inspectable through haze.
+Maintain silhouette readability.
+
+==================================================
+22. DEBUGGING AND POSE VALIDATION
+==================================================
+
+Before final effects, inspect:
+- Neutral.
+- Wind-up.
+- Contact.
+- Follow-through.
+
+Use front, side and three-quarter views.
+
+Verify EVERY configured limb:
+- Exists.
+- Has correct attachment and proportions.
+- Receives animation.
+- Uses correct local joint axes.
+- Has correct left/right hand construction.
+- Can twist its forearm independently of elbow flexion.
+- Does not intersect adjacent limbs or torso significantly.
+
+Verify:
+- Correct striking feature leads.
+- Wrists remain coherent.
+- Feet support the pose.
+- Accessories stay attached.
+
+Provide optional helpers:
+- Joint axes.
+- Palm normals.
+- Digit directions.
+- Contact marker/region.
+- Striking-feature trajectory.
+- Limb IDs.
+
+Hide by default.
+Keep debug trajectories distinct from finished motion trails.
+
+Do not claim visual checks or screenshots were performed unless actually performed.
+If visual inspection is unavailable, say so and expose inspection controls.
+
+==================================================
+23. CONTROLS AND CAMERA
+==================================================
+
+Compact controls:
+- Idle.
+- Attack once.
+- Repeat attack.
+- Trigger deep breath.
+- Pause.
+- Slow motion.
+- Attack timeline scrubber.
+- Key-pose buttons.
+- Front/side/three-quarter views.
+- Reset camera.
+- Effects toggle.
+- Camera shake toggle.
+- Debug toggle.
+- Optional scale-reference toggle.
+
+Do not build a separate prompt editor or large configuration dashboard.
+
+CAMERA
+- Full-body three-quarter starting view.
+- Free orbit, zoom and pan.
+- Rear and side inspection.
+- User control remains available during attacks.
+- No automatic cinematic cuts or forced push-ins.
+- No camera restrictions hiding incomplete geometry.
+
+LIGHTING
+- Neutral, readable form lighting.
+- Simple background.
+- Suitable grounding floor.
+- Effects-off mode remains visually coherent.
+
+SHAKE
+- Brief damped offset for substantial contact.
+- Strongest for heavy ground impact.
+- Reduce with distance.
+- Do not overwrite orbit state or target.
+- Return cleanly.
+- No accumulation.
+- Separate toggle.
+- Disabled for reduced-motion preferences.
+
+==================================================
+24. PAUSE AND SCRUB
+==================================================
+
+Pause freezes:
+- Character animation.
+- Particles.
+- Afterimages.
+- Trails.
+- Effect lifetimes.
+
+Orbit remains available.
+
+Resume without time jumps or accumulated emission bursts.
+
+Scrubbing:
+- Updates character pose consistently.
+- Reconstructs effects from attack time where practical.
+- Otherwise hides/resets non-scrubbable transient effects instead of showing misleading states.
+
+Effects-off mode must support clear model inspection.
+
+==================================================
+25. RELIABILITY AND PERFORMANCE
+==================================================
+
+- Reuse geometry and materials.
+- Instance repeated details where appropriate.
+- Avoid rebuilding geometry every frame.
+- Pool particles, debris and afterimages.
+- Cap active instances.
+- Clean up resources and listeners.
+- Handle viewport resizing.
+- Respect reduced-motion preferences.
+- Reduce effects before compromising articulation.
+
+PROJECT VALIDATION
+Before delivery:
+- Check imports and module paths.
+- Check for obsolete configuration references.
+- Confirm all configured limbs appear in the runtime registry.
+- Confirm animation, debug and effects systems use that registry.
+- Check for undefined dimensions and invalid transforms.
+- Run available build or syntax checks.
+- Launch the scene if the environment permits.
+- Inspect browser/runtime errors if available.
+
+Do not leave a partially applied configuration migration.
+
+If a test cannot be run, state exactly what was and was not verified.
+
+==================================================
+26. OPTIONAL EXPORT
+==================================================
+
+If export is implemented:
+- Keep character structure and effects in separate scene groups.
+- Export the character geometry and materials without presentation sprites, haze, trails or debug helpers.
+- Clearly distinguish a static geometry export from an animated export.
+- Do not claim animation is embedded unless it is actually exported and verified.
+
+Export is secondary to a working showcase.
+Do not let it derail the core implementation.
+
+==================================================
+27. FINAL ACCEPTANCE
+==================================================
+
+Verify:
+- Real volumetric procedural character.
+- Recognizable reference silhouette and face.
+- Limb count matches the anatomy manifest.
+- No limbs omitted, merged or reduced to decoration.
+- Correct left/right asymmetry.
+- Every arm has functional articulation.
+- Correct contact-surface orientation.
+- Attack matches the reference or documented fallback.
+- Clean return to idle.
+- Deep breath blends into attacks.
+- No drifting transforms.
+- No major joint gaps or limb intersections.
+- Trails and afterimages track actual motion.
+- Ground effects require actual ground contact.
+- Effects do not conceal modeling errors.
+- Free camera control remains intact.
+- Pause freezes the complete animated presentation.
+- Repeated attacks do not accumulate clutter.
+- Scene loads without configuration or import errors.
+
+DELIVERABLE
+Provide:
+1. Runnable Three.js project.
+2. Source files.
+3. Brief launch instructions.
+4. Anatomy manifest and any reference-conflict assumptions.
+5. Short list of remaining approximations.
+6. Honest summary of checks actually performed.
+
+Build the experience rather than merely describing it.
+
+Prioritize:
+1. Reference-faithful anatomy and silhouette.
+2. Coherent procedural modeling.
+3. Correct articulation and contact mechanics.
+4. Strong attack choreography.
+5. Satisfying motion and conditional impact effects.
+6. Living idle and deep breath.
+7. Restrained atmosphere.
+8. Compact inspection controls.

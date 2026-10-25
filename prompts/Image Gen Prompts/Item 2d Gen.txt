@@ -1,0 +1,14 @@
+[Subject & Key Geometric Features], modular stylized 3D game asset for Roblox Studio, modeled in Blender.
+
+Art Style & Silhouette:
+- Stylized chunky low-poly aesthetic, clean beveled edges, broad readable masses, oversized proportions.
+- Designed as a clean modular Blender asset, non-photorealistic, soft rounded corners, zero micro-surface clutter.
+
+Color & Surface Treatment:
+- Flat matte finishes, vibrant sea-adventure color palette, soft hand-painted edge highlights, subtle crevice ambient occlusion.
+- Smooth toy-like plastic, weathered smooth wood, and stylized matte stone materials. No noisy photoreal textures, no complex bump maps.
+
+Lighting & Viewport Staging:
+- Direct front elevation orthographic view, dead center, straight head-on eye-level angle, zero tilt, zero perspective distortion, full object framed with generous margins.
+- Clean neutral studio lighting, soft balanced symmetrical fill light, subtle edge rim light to define silhouette.
+- Solid uniform neutral gray background [#808080], clean silhouette cutout, isolated asset, no terrain floor, no ground plane, no environment backdrop.

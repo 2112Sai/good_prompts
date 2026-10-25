@@ -1,0 +1,315 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1350" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EAF2FA" />
+      <stop offset="100%" stop-color="#D7E7F6" />
+    </linearGradient>
+
+    <!-- Panel Fill Gradient -->
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F2F7FC" />
+    </linearGradient>
+
+    <!-- Materials Panel Inner Glow Gradient -->
+    <radialGradient id="matPanelGlow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#F0F7FF" />
+      <stop offset="60%" stop-color="#E4F0FB" />
+      <stop offset="100%" stop-color="#D3E5F6" />
+    </radialGradient>
+
+    <!-- Sphere Shading Gradients -->
+    <radialGradient id="sphereGradLight" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="35%" stop-color="#CCD8E5" />
+      <stop offset="70%" stop-color="#8DA1B5" />
+      <stop offset="95%" stop-color="#55697D" />
+      <stop offset="100%" stop-color="#46586A" />
+    </radialGradient>
+
+    <radialGradient id="sphereGradMid" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#BAC9D8" />
+      <stop offset="68%" stop-color="#7B8E9F" />
+      <stop offset="92%" stop-color="#4E5D6C" />
+      <stop offset="100%" stop-color="#3D4B58" />
+    </radialGradient>
+
+    <radialGradient id="sphereGradDark" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#EAF0F6" />
+      <stop offset="28%" stop-color="#9EAFBF" />
+      <stop offset="65%" stop-color="#627382" />
+      <stop offset="90%" stop-color="#3B4752" />
+      <stop offset="100%" stop-color="#2D3740" />
+    </radialGradient>
+
+    <!-- Sphere Ground Contact Shadows -->
+    <radialGradient id="sphereShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#273C50" stop-opacity="0.38" />
+      <stop offset="60%" stop-color="#273C50" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#273C50" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Badge Background Gradient -->
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#193658" />
+      <stop offset="100%" stop-color="#122A46" />
+    </linearGradient>
+
+    <!-- Badge Corner Subtle Highlight -->
+    <filter id="panelShadow" x="-1%" y="-1%" width="102%" height="102%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#5C7A99" flood-opacity="0.15" />
+    </filter>
+
+    <style>
+      .panel {
+        fill: url(#panelGrad);
+        stroke: #AFC9E3;
+        stroke-width: 1.5;
+        rx: 8px;
+        filter: url(#panelShadow);
+      }
+      .badge-bg {
+        fill: url(#badgeGrad);
+        rx: 5px;
+      }
+      .badge-text {
+        fill: #FFFFFF;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.6px;
+      }
+      .footer-pill-bg {
+        fill: #BCD6EE;
+        rx: 15px;
+      }
+      .footer-pill-text {
+        fill: #19385C;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 11.5px;
+        font-weight: 800;
+        letter-spacing: 0.6px;
+      }
+      .footer-center-text {
+        fill: #3F678F;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1920" height="1350" fill="url(#bgGrad)" />
+
+  <!-- ==================== TOP ROW PANELS ==================== -->
+  <!-- Top-Down Map (Orthographic) -->
+  <rect class="panel" x="20" y="20" width="1132" height="740" />
+
+  <!-- 3/4 Perspective Overview -->
+  <rect class="panel" x="1164" y="20" width="736" height="360" />
+
+  <!-- Layout Trace (Top View) -->
+  <rect class="panel" x="1164" y="392" width="362" height="368" />
+
+  <!-- Low-Poly Blockout -->
+  <rect class="panel" x="1538" y="392" width="362" height="368" />
+
+  <!-- ==================== MIDDLE ROW PANELS (ELEVATIONS) ==================== -->
+  <!-- Front Elevation -->
+  <rect class="panel" x="20" y="774" width="384" height="240" />
+
+  <!-- Side Elevation -->
+  <rect class="panel" x="416" y="774" width="384" height="240" />
+
+  <!-- Terrain / Elevation Profile -->
+  <rect class="panel" x="812" y="774" width="714" height="240" />
+
+  <!-- Terrain Cross-Section -->
+  <rect class="panel" x="1538" y="774" width="362" height="240" />
+
+  <!-- ==================== BOTTOM ROW PANELS (DETAILS & PALETTE) ==================== -->
+  <!-- Environment Detail 01 -->
+  <rect class="panel" x="20" y="1028" width="252" height="240" />
+
+  <!-- Environment Detail 02 -->
+  <rect class="panel" x="284" y="1028" width="252" height="240" />
+
+  <!-- Environment Detail 03 -->
+  <rect class="panel" x="548" y="1028" width="252" height="240" />
+
+  <!-- Structure / Prop Detail -->
+  <rect class="panel" x="812" y="1028" width="340" height="240" />
+
+  <!-- Environment Detail 04 -->
+  <rect class="panel" x="1164" y="1028" width="362" height="240" />
+
+  <!-- Materials & Color Palette (Custom styling with gradient) -->
+  <rect x="1538" y="1028" width="362" height="240" rx="8" fill="url(#matPanelGlow)" stroke="#AFC9E3" stroke-width="1.5" filter="url(#panelShadow)" />
+
+  <!-- ==================== PANEL BADGES ==================== -->
+  <!-- 1. Top-Down Map -->
+  <g transform="translate(26, 26)">
+    <rect class="badge-bg" width="256" height="27" />
+    <text class="badge-text" x="12" y="18.5">TOP-DOWN MAP (ORTHOGRAPHIC)</text>
+  </g>
+
+  <!-- 2. 3/4 Perspective Overview -->
+  <g transform="translate(1170, 26)">
+    <rect class="badge-bg" width="216" height="27" />
+    <text class="badge-text" x="12" y="18.5">3/4 PERSPECTIVE OVERVIEW</text>
+  </g>
+
+  <!-- 3. Layout Trace (Top View) -->
+  <g transform="translate(1170, 398)">
+    <rect class="badge-bg" width="206" height="27" />
+    <text class="badge-text" x="12" y="18.5">LAYOUT TRACE (TOP VIEW)</text>
+  </g>
+
+  <!-- 4. Low-Poly Blockout -->
+  <g transform="translate(1544, 398)">
+    <rect class="badge-bg" width="170" height="27" />
+    <text class="badge-text" x="12" y="18.5">LOW-POLY BLOCKOUT</text>
+  </g>
+
+  <!-- 5. Front Elevation -->
+  <g transform="translate(26, 780)">
+    <rect class="badge-bg" width="138" height="27" />
+    <text class="badge-text" x="12" y="18.5">FRONT ELEVATION</text>
+  </g>
+
+  <!-- 6. Side Elevation -->
+  <g transform="translate(422, 780)">
+    <rect class="badge-bg" width="126" height="27" />
+    <text class="badge-text" x="12" y="18.5">SIDE ELEVATION</text>
+  </g>
+
+  <!-- 7. Terrain / Elevation Profile -->
+  <g transform="translate(818, 780)">
+    <rect class="badge-bg" width="216" height="27" />
+    <text class="badge-text" x="12" y="18.5">TERRAIN / ELEVATION PROFILE</text>
+  </g>
+
+  <!-- 8. Terrain Cross-Section -->
+  <g transform="translate(1544, 780)">
+    <rect class="badge-bg" width="186" height="27" />
+    <text class="badge-text" x="12" y="18.5">TERRAIN CROSS-SECTION</text>
+  </g>
+
+  <!-- 9. Environment Detail 01 -->
+  <g transform="translate(26, 1034)">
+    <rect class="badge-bg" width="168" height="27" />
+    <text class="badge-text" x="12" y="18.5">ENVIRONMENT DETAIL 01</text>
+  </g>
+
+  <!-- 10. Environment Detail 02 -->
+  <g transform="translate(290, 1034)">
+    <rect class="badge-bg" width="168" height="27" />
+    <text class="badge-text" x="12" y="18.5">ENVIRONMENT DETAIL 02</text>
+  </g>
+
+  <!-- 11. Environment Detail 03 -->
+  <g transform="translate(554, 1034)">
+    <rect class="badge-bg" width="168" height="27" />
+    <text class="badge-text" x="12" y="18.5">ENVIRONMENT DETAIL 03</text>
+  </g>
+
+  <!-- 12. Structure / Prop Detail -->
+  <g transform="translate(818, 1034)">
+    <rect class="badge-bg" width="176" height="27" />
+    <text class="badge-text" x="12" y="18.5">STRUCTURE / PROP DETAIL</text>
+  </g>
+
+  <!-- 13. Environment Detail 04 -->
+  <g transform="translate(1170, 1034)">
+    <rect class="badge-bg" width="168" height="27" />
+    <text class="badge-text" x="12" y="18.5">ENVIRONMENT DETAIL 04</text>
+  </g>
+
+  <!-- 14. Materials & Color Palette -->
+  <g transform="translate(1544, 1034)">
+    <rect class="badge-bg" width="194" height="27" />
+    <text class="badge-text" x="12" y="18.5">MATERIALS & COLOR PALETTE</text>
+  </g>
+
+  <!-- ==================== MATERIALS & COLOR PALETTE INTERIOR ==================== -->
+  <g id="palette-spheres">
+    <!-- Row 1 Spheres -->
+    <!-- Sphere 1 -->
+    <ellipse cx="1574" cy="1114" rx="15" ry="5.5" fill="url(#sphereShadow)" />
+    <circle cx="1574" cy="1102" r="15.5" fill="url(#sphereGradLight)" />
+
+    <!-- Sphere 2 -->
+    <ellipse cx="1646" cy="1114" rx="15" ry="5.5" fill="url(#sphereShadow)" />
+    <circle cx="1646" cy="1102" r="15.5" fill="url(#sphereGradMid)" />
+
+    <!-- Sphere 3 -->
+    <ellipse cx="1719" cy="1114" rx="15" ry="5.5" fill="url(#sphereShadow)" />
+    <circle cx="1719" cy="1102" r="15.5" fill="url(#sphereGradDark)" />
+
+    <!-- Sphere 4 -->
+    <ellipse cx="1792" cy="1114" rx="15" ry="5.5" fill="url(#sphereShadow)" />
+    <circle cx="1792" cy="1102" r="15.5" fill="url(#sphereGradMid)" />
+
+    <!-- Sphere 5 -->
+    <ellipse cx="1864" cy="1114" rx="15" ry="5.5" fill="url(#sphereShadow)" />
+    <circle cx="1864" cy="1102" r="15.5" fill="url(#sphereGradLight)" />
+
+    <!-- Row 2 Spheres -->
+    <!-- Sphere 6 -->
+    <ellipse cx="1574" cy="1166" rx="15" ry="5.5" fill="url(#sphereShadow)" />
+    <circle cx="1574" cy="1154" r="15.5" fill="url(#sphereGradDark)" />
+
+    <!-- Sphere 7 -->
+    <ellipse cx="1646" cy="1166" rx="15" ry="5.5" fill="url(#sphereShadow)" />
+    <circle cx="1646" cy="1154" r="15.5" fill="url(#sphereGradMid)" />
+
+    <!-- Sphere 8 -->
+    <ellipse cx="1719" cy="1166" rx="15" ry="5.5" fill="url(#sphereShadow)" />
+    <circle cx="1719" cy="1154" r="15.5" fill="url(#sphereGradLight)" />
+
+    <!-- Sphere 9 -->
+    <ellipse cx="1792" cy="1166" rx="15" ry="5.5" fill="url(#sphereShadow)" />
+    <circle cx="1792" cy="1154" r="15.5" fill="url(#sphereGradMid)" />
+
+    <!-- Sphere 10 -->
+    <ellipse cx="1864" cy="1166" rx="15" ry="5.5" fill="url(#sphereShadow)" />
+    <circle cx="1864" cy="1154" r="15.5" fill="url(#sphereGradDark)" />
+
+    <!-- Color Palette Swatch Bar -->
+    <g transform="translate(1558, 1222)">
+      <!-- Base container for swatches -->
+      <rect width="322" height="22" rx="4" fill="#C2D6E9" opacity="0.6" />
+      <!-- Individual Swatch Blocks -->
+      <rect x="2" y="2" width="50" height="18" rx="2" fill="#8898A7" />
+      <rect x="55" y="2" width="50" height="18" rx="2" fill="#9FB0BF" />
+      <rect x="108" y="2" width="50" height="18" rx="2" fill="#AEC0D0" />
+      <rect x="161" y="2" width="50" height="18" rx="2" fill="#BDCFDF" />
+      <rect x="214" y="2" width="50" height="18" rx="2" fill="#A8BAC9" />
+      <rect x="267" y="2" width="53" height="18" rx="2" fill="#CBD9E5" />
+    </g>
+  </g>
+
+  <!-- ==================== FOOTER ==================== -->
+  <!-- Left Pill -->
+  <g transform="translate(20, 1290)">
+    <rect class="footer-pill-bg" width="374" height="28" />
+    <text class="footer-pill-text" x="14" y="18.5">FANTASY ISLAND ENVIRONMENT - 3D MODELING REFERENCE</text>
+  </g>
+
+  <!-- Center Text -->
+  <text class="footer-center-text" x="960" y="1309" text-anchor="middle">
+    Model in Blender  •  Optimized for Roblox Studio  •  Modular  •  Stylized
+  </text>
+
+  <!-- Right Pill -->
+  <g transform="translate(1530, 1290)">
+    <rect class="footer-pill-bg" width="370" height="28" />
+    <text class="footer-pill-text" x="14" y="18.5">
+      BUILD A DUNGEON  <tspan font-weight="600" fill="#2B4D72">ENVIRONMENT REFERENCE</tspan>
+    </text>
+  </g>
+</svg>

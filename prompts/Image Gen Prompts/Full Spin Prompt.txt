@@ -1,0 +1,17 @@
+Using the attached character as the approved reference, generate FOUR SEPARATE image outputs:
+
+1. Full-body three-quarter view.
+2. Full-body front orthographic view.
+3. Full-body side orthographic view.
+4. Full-body back orthographic view.
+
+Each output must be its own individual image—not a collage, grid, reference sheet, or multiple views on one canvas.
+
+Maintain the exact same character design, proportions, anatomy, accessories, colors, and stylized 3D rendering across all four images.
+
+Use a solid white background.
+No text, arrows, labels, borders, rulers, scenery, or ground shadows.
+Keep the entire character visible with clear white space around it.
+Use the same neutral pose and consistent character scale.
+
+Return the four images separately. Do not combine them.

@@ -1,0 +1,279 @@
+Create a complete item-design reference sheet using BOTH attached files.
+
+REFERENCE ROLES
+- The item image is the approved design. It defines the item’s appearance, proportions, geometry, colors, materials, markings, components, and rendering style.
+- The SVG defines the reference-sheet layout and panel organization.
+
+This is a documentation and layout task—not an item redesign.
+
+GOAL
+Populate the template with consistent item artwork and useful reference details.
+
+The item drawings will later be cropped and separated from their backgrounds for further processing. Prioritize clean silhouettes, plain white backgrounds, and separation between artwork and annotations.
+
+GLOBAL PRESENTATION
+- Solid white background (#FFFFFF) across the entire sheet.
+- Black text.
+- Thin black panel borders and dividers.
+- White header strips.
+- No blueprint styling.
+- No background grid.
+- No gradients, textures, scenery, or decorative graphics in the background.
+- Keep the item artwork in its approved colors.
+- Preserve material textures and surface treatments that belong to the approved item.
+- Material swatches may use their actual reference colors.
+
+CRITICAL EXTRACTION RULES
+- Every item drawing must sit against uninterrupted solid white.
+- No arrows, leader lines, pointers, annotation connectors, or floating callouts anywhere on the sheet.
+- Do not draw lines from labels to item features.
+- No text or numbers over the item, except markings already present in the approved design.
+- No panel borders, dividers, rulers, or other graphics touching or crossing an item silhouette.
+- Keep labels in separate caption areas below their drawings.
+- Leave a clear white margin around every drawing, including protruding features and attached components.
+- Open spaces, holes, handles, and gaps between components must remain white wherever the background is visible through them.
+- No ground planes, platforms, cast shadows, or shadow patches beneath the item.
+- Preserve shading and self-shadowing ON the item so its forms remain three-dimensional.
+- No checkerboard transparency patterns.
+- Do not add a black outline around the item unless it already exists in the approved design.
+- Preserve white, pale, or transparent features belonging to the item; do not recolor them merely to contrast with the background.
+
+ITEM AND STYLE CONSISTENCY
+- Preserve the approved stylized Roblox game-asset appearance.
+- Match its chunky forms, simplified geometry, proportions, and silhouette.
+- Preserve its exact number of parts, attachments, openings, and repeated features wherever established by the reference.
+- Keep colors, materials, markings, and intentional asymmetry consistent.
+- Keep features on the same physical sides across all views.
+- Do not mirror asymmetric details to make the layout more convenient.
+- Do not revert to realistic product photography, realistic fantasy illustration, or excessively detailed painted rendering.
+- Do not add unrelated attachments, ornaments, mechanisms, effects, or components.
+- Do not add glow, particles, or emissive elements unless they exist in the approved design.
+- For areas hidden in the reference, create a restrained, coherent continuation.
+- Identify newly proposed hidden-surface details in a separate caption, never with a floating callout or arrow.
+- Use a consistent item orientation throughout the sheet. Define “front” from the item’s primary functional or presentation face. If ambiguous, choose a clear orientation and explain it briefly in a separate text area.
+
+LAYOUT
+Follow the attached SVG’s landscape composition and panel hierarchy. Preserve its overall arrangement, adapting the section titles and contents for an item:
+- Large main-item panel on the left.
+- Scale reference at the bottom left.
+- Orthographic views in the upper center.
+- Functional views / alternate states and material colors below them.
+- Faction / item context across the lower center.
+- Twelve component-detail boxes in the upper right.
+- Assembly / construction key in the lower right.
+- Identification header across the top.
+
+Increase output resolution if needed while preserving the overall aspect ratio.
+
+Populate every section as follows:
+
+1. MAIN ITEM VIEW
+
+Show one complete three-quarter view of the item in its default state.
+
+- Preserve the approved design and rendering style.
+- Show the entire silhouette without cropping.
+- Choose an angle that makes the item’s overall form, depth, and major features understandable.
+- Keep attached components visible or spatially understandable.
+- Keep the item centered with generous white space around it.
+- No labels, measurements, lines, or graphics inside this artwork area.
+- No ground shadow.
+- Do not add a stand, mount, or support unless it belongs to the approved design.
+
+2. ORTHOGRAPHIC VIEWS — FRONT, SIDE, BACK
+
+Draw the SAME item from the front, side, and back.
+
+- Use matching scale, proportions, orientation, and baseline.
+- Avoid perspective distortion.
+- Show the item in the same default configuration in every view.
+- Do not independently resize each view to fill its panel.
+- Keep asymmetric details and attachments on the correct physical sides.
+- Leave clear white space between views.
+- Do not draw alignment guides, rulers, dimension lines, or markers over or behind these drawings.
+- If an important feature is hidden in these three views, show it in a component-detail box or functional study rather than changing the template’s main panel hierarchy.
+
+Place the labels in a separate caption row beneath the artwork:
+“FRONT”
+“SIDE”
+“BACK”
+
+DIMENSION CONVENTION
+- Use supplied dimensions if available.
+- Use studs for all dimensional information.
+- If no dimensions are supplied, assign one consistent proposed overall size and clearly label it “PROPOSED SCALE” in a separate text area.
+- Do not present an estimated dimension as an approved specification.
+- Use that same size consistently across the orthographic views, scale comparison, and header.
+- Define overall dimensions as height × width × depth in the item’s default orientation.
+- Include all permanent protrusions in those dimensions.
+- Measure removable components in the default attached configuration, unless a separate caption explicitly identifies a different state.
+
+3. FUNCTIONAL VIEWS / ALTERNATE STATES
+
+Replace the character expression/action section with three separate compact item studies:
+- An alternate three-quarter angle showing features not clearly visible in the main view.
+- A functional or interaction-oriented view showing the item’s primary usable surface, grip, opening, attachment area, or contact point.
+- An alternate state, only if supported by the approved design—for example, open/closed, folded/unfolded, or attached/detached.
+
+If the item has no supported moving parts or alternate states, use a top view, underside view, or additional useful angle instead.
+
+- Do not invent articulation, moving mechanisms, hidden compartments, abilities, or effects.
+- Do not add a character, hand, or user to these studies unless explicitly supplied or requested.
+- Keep the approved design consistent.
+- Keep each study isolated on white, with sufficient spacing to crop it independently.
+- Put labels below each study.
+- No arrows, floating annotations, motion trails, or explanatory graphics over the artwork.
+
+4. MATERIAL COLORS — EIGHT SWATCHES
+
+Fill all eight swatch slots using the approved item palette.
+
+Label each swatch with:
+- Material or feature name.
+- Hex color.
+- Simple material treatment where useful, such as matte, satin, polished, translucent, or emissive.
+
+Additional requirements:
+- Distinguish ordinary surface colors from emissive elements.
+- Only label a material emissive if the approved design supports it.
+- If fewer than eight materials exist, use supporting shades from the existing palette rather than introducing new colors.
+- Treat lighting highlights and shadows as supporting shades, not automatically as separate physical materials.
+- Keep swatches and their labels completely separate from item drawings.
+- Where exact source colors cannot be determined, identify hex values as approximate reference colors.
+
+5. SCALE REFERENCE — ROBLOX STUDS
+
+Use:
+- Reference player: exactly 5 studs tall for this sheet, excluding hats and accessories.
+- Item: the supplied approved dimensions, or the clearly identified proposed dimensions established for this sheet.
+- Scale relationship: calculated consistently from those dimensions.
+
+Draw a simple neutral Roblox reference player and the item side by side at the same scale.
+
+- Keep both silhouettes clean and isolated on white.
+- Use a shared baseline without drawing a baseline or ground plane.
+- Show the item in its default orientation.
+- If the item would normally be held, worn, or suspended, show it independently beside the player rather than adding invented mounting hardware.
+- Do not distort or enlarge a small item merely to fill the panel.
+- If a small item needs an enlarged study for readability, place it in a separate detail box and label that study “ENLARGED DETAIL” beneath the drawing.
+
+Place these captions beneath the drawings, replacing bracketed fields with the actual values:
+“PLAYER — 5 STUDS”
+“ITEM — [HEIGHT] H × [WIDTH] W × [DEPTH] D STUDS”
+“HEIGHT RATIO — [ITEM HEIGHT ÷ 5]× PLAYER HEIGHT”
+
+If dimensions are not supplied, also include:
+“PROPOSED SCALE — NOT AN APPROVED DIMENSION”
+
+A simple vertical ruler may appear in a separate strip beside the comparison.
+- Use clearly labeled stud increments appropriate to the item’s size.
+- The ruler must not touch either silhouette.
+- Do not use dimension arrows or extension lines.
+- Do not use meters, feet, or inches.
+
+6. COMPONENTS / FEATURE BREAKDOWN — TWELVE BOXES
+
+Fill all twelve boxes with close-up drawings of actual features from the approved item.
+
+Select useful subjects appropriate to the item, such as:
+- Primary body or housing.
+- Front face or functional end.
+- Rear face.
+- Top surface.
+- Underside.
+- Handle, grip, or contact surface.
+- Existing attachment or mounting point.
+- Existing joint, hinge, seam, or connection.
+- Openings, cutouts, or recesses.
+- Markings, symbols, or decorative details.
+- Material transitions.
+- Signature component or accessory.
+
+Adapt the subjects to the supplied item. Do not invent features merely to fill the boxes.
+
+For every box:
+- Show one clearly isolated detail or a closely related set of details.
+- Use a plain white background.
+- Keep the drawing away from the panel border.
+- Put a short descriptive caption below it.
+- Do not use arrows, leader lines, pointers, or text over the artwork.
+- Identify left/right, front/rear, or top/underside in the caption where useful.
+- Keep attached features attached in close-up studies unless the reference clearly supports their removal.
+- A close-up may crop surrounding item geometry, but keep the featured detail fully visible and separated from panel borders by white space.
+
+If the item has fewer than twelve distinct components, use alternate angles, surface close-ups, or construction details of existing features. Do not create twelve fictional parts.
+
+7. ASSEMBLY / CONSTRUCTION KEY — CLEAN CONSTRUCTION STUDIES
+
+Explain the item’s major forms and any genuinely separate components through isolated drawings.
+
+- Use a main construction study plus separate supporting component studies.
+- Keep each drawing on white with space around it.
+- Use captions beneath drawings to identify major forms, components, or accessories.
+- Show attachment surfaces through the drawing angle or an additional isolated view—not through arrows or connector lines.
+- Do not overlay wireframes, joint dots, labels, numbers, or technical diagrams on the main item.
+- Do not imply that continuous or fused surfaces are detachable.
+- Do not invent internal mechanisms, fasteners, sockets, or hidden components.
+- Show a disassembled or exploded arrangement only when the approved reference clearly supports those separate parts.
+- Even in a supported exploded arrangement, do not use connector lines, arrows, or graphics between components.
+- If the item is a single continuous object, use whole-item construction angles and surface-region studies instead of a fictional assembly breakdown.
+- Keep conceptual modeling, pivot, or implementation notes in a separate text area.
+- Distinguish proposed implementation notes from visible approved design facts.
+
+If numbered identification is necessary, place the number beside the caption, not on the component.
+
+8. FACTION / ITEM CONTEXT
+
+Use supplied faction, ownership, item category, and gameplay information if available.
+
+If none is supplied:
+- Keep “FACTION: TBD.”
+- Use a short separate text block marked “CONTEXT: TBD.”
+- Use “FUNCTION: TBD” if the item’s purpose is not established.
+- Do not invent established lore, rarity, stats, abilities, damage values, or acquisition methods.
+- Do not add an environment illustration, scenery, or decorative vignette.
+
+Keep this panel visually simple and separate from the item artwork.
+
+9. HEADER
+
+Use:
+- Working title: short descriptive identifier based on the item.
+- Type: supplied item category, or “ITEM” if unspecified.
+- Faction: “TBD” unless provided.
+- Levels: “TBD” unless provided.
+- Sheet: “ITEM REFERENCE.”
+- Dimensions: “[HEIGHT] H × [WIDTH] W × [DEPTH] D STUDS.”
+- Scale reference: “5-STUD PLAYER.”
+- Dimension status: “APPROVED DIMENSIONS” only if supplied; otherwise “PROPOSED SCALE.”
+
+Replace bracketed fields with the actual values used on the sheet.
+Keep all header text black on white.
+
+FINAL CHECK
+Verify:
+- The approved item design is preserved.
+- Every view has consistent geometry, proportions, materials, markings, and component placement.
+- All required panels are populated.
+- The main and orthographic drawings have clean, unobstructed silhouettes.
+- Backgrounds are pure white.
+- There are no arrows, leader lines, floating callouts, or annotation connectors.
+- No labels, borders, rulers, or other graphics touch the item.
+- There are no ground shadows or background patterns.
+- Labels sit in separate caption areas.
+- All orthographic views use the same scale and default configuration.
+- Dimensions are consistent across the header, orthographic section, and scale comparison.
+- The reference player is exactly 5 studs tall.
+- The item and player are depicted at the same scale in the scale-reference panel.
+- Any unsupplied dimensions are clearly marked as proposed.
+- No unsupported moving parts, internal mechanisms, accessories, or functions have been invented.
+- All small details remain readable.
+
+DELIVERABLE
+Produce the completed visual reference sheet—not a written plan.
+
+Also provide the main item view and the front, side, and back views as separate, full-resolution images if supported. Each separate image should contain only one item view on solid white, without labels, borders, rulers, or other graphics.
+
+If separate image output is not supported, ensure each view occupies a clean rectangular area that can be cropped without including text or panel borders.
+
+Prioritize faithful item documentation and easy artwork extraction over decorative presentation.

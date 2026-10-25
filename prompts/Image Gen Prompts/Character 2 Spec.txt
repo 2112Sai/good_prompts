@@ -1,0 +1,241 @@
+Create a complete character-design reference sheet using BOTH attached files.
+
+REFERENCE ROLES
+- The character image is the approved design. It defines the character’s appearance, proportions, anatomy, colors, materials, accessories, and rendering style.
+- The SVG defines the reference-sheet layout and panel organization.
+
+This is a documentation and layout task—not another character redesign.
+
+GOAL
+Populate the template with consistent character artwork and useful reference details.
+
+The character drawings will later be cropped and separated from their backgrounds for further processing. Prioritize clean silhouettes, plain white backgrounds, and separation between artwork and annotations.
+
+GLOBAL PRESENTATION
+- Solid white background (#FFFFFF) across the entire sheet.
+- Black text.
+- Thin black panel borders and dividers.
+- White header strips.
+- No blueprint styling.
+- No background grid.
+- No gradients, textures, scenery, or decorative background graphics.
+- Keep the character artwork in its approved colors.
+- Material swatches may use their actual reference colors.
+
+CRITICAL EXTRACTION RULES
+- Every character drawing must sit against uninterrupted solid white.
+- No arrows, leader lines, pointers, annotation connectors, or floating callouts anywhere on the sheet.
+- Do not draw lines from labels to body parts.
+- No text or numbers over the character.
+- No panel borders, dividers, rulers, or other graphics touching or crossing a character silhouette.
+- Keep labels in separate caption areas below their drawings.
+- Leave a clear white margin around every drawing, including accessories and protruding features.
+- Open spaces between limbs and accessories must remain white.
+- No ground planes, platforms, cast shadows, or shadow patches beneath the character.
+- Preserve shading and self-shadowing ON the character so its forms remain three-dimensional.
+- No checkerboard transparency patterns.
+- Do not add a black outline around the character unless it already exists in the approved design.
+- Preserve white or pale features belonging to the character; do not recolor them merely to contrast with the background.
+
+CHARACTER AND STYLE CONSISTENCY
+- Preserve the approved stylized Roblox game-model appearance.
+- Match its chunky forms, simplified geometry, proportions, and silhouette.
+- Preserve its exact number of limbs.
+- Keep colors, accessories, markings, and intentional asymmetry consistent.
+- Keep features on the same anatomical sides across all views.
+- Do not revert to realistic fantasy illustration or detailed painted fur.
+- Do not add unrelated equipment, new armor, weapons, ornaments, or anatomical features.
+- For areas hidden in the reference, create a restrained, coherent continuation.
+- Identify newly proposed details in a separate caption, never with a floating callout or arrow.
+
+LAYOUT
+Follow the attached SVG’s landscape composition and panel hierarchy:
+- Large main-character panel on the left.
+- Scale reference at the bottom left.
+- Orthographic views in the upper center.
+- Expressions/action poses and material colors below them.
+- Faction context across the lower center.
+- Twelve component-detail boxes in the upper right.
+- Assembly key in the lower right.
+- Identification header across the top.
+
+Increase output resolution if needed while preserving the overall aspect ratio.
+
+Populate every section as follows:
+
+1. MAIN CHARACTER VIEW
+
+Show one complete, full-body three-quarter view in a neutral stance.
+
+- Preserve the approved design and rendering style.
+- Show the entire silhouette without cropping.
+- Make all limbs and accessories understandable.
+- Keep the character centered with generous white space around it.
+- No labels, measurements, lines, or graphics inside this artwork area.
+- No ground shadow.
+
+2. ORTHOGRAPHIC VIEWS — FRONT, SIDE, BACK
+
+Draw the SAME character from the front, side, and back.
+
+- Use matching scale, proportions, ground level, and neutral modeling pose.
+- Avoid perspective distortion.
+- Set neutral standing height to exactly 12.5 studs.
+- Measure from the soles of the feet to the highest permanent anatomical point, including ears, horns, or equivalent features.
+- Exclude removable accessories and temporary visual effects from the height measurement.
+- Position limbs slightly away from the torso to clarify their shapes and attachments.
+- Keep accessories and asymmetric features on the correct anatomical sides.
+- Do not independently resize each view to fill its panel.
+- Leave clear white space between the views.
+- Do not draw alignment guides, rulers, dimension lines, or joint markers over or behind these drawings.
+
+Place the labels in a separate caption row beneath the artwork:
+“FRONT”
+“SIDE”
+“BACK”
+
+3. EXPRESSIONS / ACTION POSES
+
+Include separate compact studies of:
+- Neutral or watchful expression.
+- Angry or combat-ready expression.
+- One attack wind-up or action pose appropriate to the character.
+
+Keep the approved design consistent.
+
+Do not invent weapons or abilities absent from the reference.
+
+Keep each study isolated on white, with sufficient spacing to crop it independently.
+
+Put any labels below each study. No arrows or floating annotations.
+
+4. MATERIAL COLORS — EIGHT SWATCHES
+
+Fill all eight swatch slots using the approved character palette.
+
+Label each swatch with:
+- Material or feature name.
+- Hex color.
+- Simple material treatment where useful.
+
+Distinguish ordinary surface colors from emissive elements.
+
+If fewer than eight materials exist, use supporting shades from the existing palette rather than introducing new colors.
+
+Keep swatches and their labels completely separate from character drawings.
+
+5. SCALE REFERENCE — ROBLOX STUDS
+
+Use:
+- Reference player: exactly 5 studs tall for this sheet, excluding hats and accessories.
+- Boss: exactly 12.5 studs tall in its neutral standing pose.
+- Height ratio: exactly 2.5×.
+
+Draw the player and boss side by side at the same scale and ground level.
+
+Keep both silhouettes clean and isolated on white.
+
+Place these captions beneath the drawings:
+“PLAYER — 5 STUDS”
+“BOSS — 12.5 STUDS”
+“HEIGHT RATIO — 2.5×”
+
+A simple vertical ruler may appear in a separate strip beside the comparison, with 1-stud increments and a marked 12.5-stud endpoint.
+
+The ruler must not touch either silhouette.
+Do not use dimension arrows or extension lines.
+
+Use studs for all dimensional information. Do not use meters or feet.
+
+6. COMPONENTS / GEAR BREAKDOWN — TWELVE BOXES
+
+Fill all twelve boxes with close-up drawings of actual features from the approved character.
+
+Select useful subjects such as:
+- Head and facial structure.
+- Eyes.
+- Masks or head accessories.
+- Shoulder and limb connections.
+- Hands, paws, or claws.
+- Feet.
+- Clothing or wrap construction.
+- Markings or scars.
+- Back forms.
+- Fur clumps or hair masses.
+- Material transitions.
+- Signature accessories.
+
+Adapt the subjects to the supplied character. Do not invent features merely to fill the boxes.
+
+For every box:
+- Show one clearly isolated detail or a closely related set of details.
+- Use a plain white background.
+- Keep the drawing away from the panel border.
+- Put a short descriptive caption below it.
+- Do not use arrows, leader lines, pointers, or text over the artwork.
+
+If needed, identify anatomical left or right in the caption.
+
+7. ASSEMBLY KEY — CLEAN CONSTRUCTION STUDIES
+
+Explain the major body regions and separate accessories through isolated drawings.
+
+- Use a main construction study plus separate supporting component studies.
+- Keep each drawing on white with space around it.
+- Use captions beneath drawings to identify body regions or accessories.
+- Show attachment surfaces through the drawing angle or an additional isolated view—not through arrows or connector lines.
+- Do not overlay skeletons, joint dots, wireframes, labels, or numbers on the main character.
+- Do not imply organic body parts are mechanically detachable.
+- Do not invent missing accessories or components.
+- Keep any conceptual modeling or rigging notes in a separate text area.
+
+If numbered identification is necessary, place the number beside the caption, not on the component.
+
+8. FACTION CONTEXT
+
+Use supplied faction information if available.
+
+If none is supplied:
+- Keep “FACTION: TBD.”
+- Use a short separate text block marked “CONTEXT: TBD.”
+- Do not add an environment illustration, scenery, or decorative vignette.
+- Do not invent established lore.
+
+Keep this panel visually simple and separate from the character artwork.
+
+9. HEADER
+
+Use:
+- Working title: short descriptive identifier based on the character.
+- Role: “BOSS”
+- Faction: “TBD” unless provided.
+- Levels: “TBD” unless provided.
+- Sheet: “CHARACTER REFERENCE”
+- Height: “12.5 STUDS”
+- Scale reference: “2.5× A 5-STUD PLAYER”
+
+Keep all header text black on white.
+
+FINAL CHECK
+Verify:
+- The approved character design is preserved.
+- Every view has consistent anatomy and proportions.
+- All required panels are populated.
+- The main and orthographic character drawings have clean, unobstructed silhouettes.
+- Backgrounds are pure white.
+- There are no arrows, leader lines, floating callouts, or annotation connectors.
+- No labels, borders, rulers, or other graphics touch the character.
+- There are no ground shadows or background patterns.
+- Labels sit in separate caption areas.
+- The boss is 12.5 studs tall in the neutral standing views.
+- The reference player is 5 studs tall.
+- All small details remain readable.
+
+DELIVERABLE
+Produce the completed visual reference sheet—not a written plan.
+
+Also provide the main character view and the front, side, and back views as separate, full-resolution images if supported. Each separate image should contain only one character view on solid white, without labels, borders, rulers, or other graphics.
+
+If separate image output is not supported, ensure each view occupies a clean rectangular area that can be cropped without including text or panel borders.
+
+Prioritize faithful character documentation and easy artwork extraction over decorative presentation.

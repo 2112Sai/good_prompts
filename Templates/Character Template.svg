@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="100%" height="100%" style="background-color: #FFFFFF; font-family: &#39;Courier New&#39;, Courier, monospace, sans-serif;">
+  <defs>
+    <!-- Background Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E0E0E0" stroke-width="1" />
+      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#CCCCCC" stroke-width="1.5" />
+    </pattern>
+
+    <!-- Global Styles for Lines and Text -->
+    <style>
+      .border-outer { fill: none; stroke: #000000; stroke-width: 4; }
+      .border-panel { fill: #FFFFFF; stroke: #000000; stroke-width: 2; }
+      .header-bar { fill: #FFFFFF; stroke: #000000; stroke-width: 2; }
+      .border-sub { fill: none; stroke: #000000; stroke-width: 1.5; }
+      .panel-header-fill { fill: #F0F0F0; stroke: #000000; stroke-width: 1.5; }
+      .text-title { fill: #000000; font-size: 14px; font-weight: bold; letter-spacing: 1.5px; }
+      .text-sub { fill: #000000; font-size: 12px; font-weight: bold; letter-spacing: 2px; }
+      .header-text { fill: #000000; font-size: 18px; font-weight: bold; letter-spacing: 2px; }
+    </style>
+  </defs>
+
+  <!-- Clean White Background -->
+  <rect width="100%" height="100%" fill="#FFFFFF" />
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <!-- Outer Canvas Border -->
+  <rect x="20" y="20" width="1560" height="960" class="border-outer" />
+
+  <!-- ==================== HEADER BAR ==================== -->
+  <g id="header">
+    <rect x="20" y="20" width="1240" height="60" class="header-bar" />
+    <text x="500" y="56" class="header-text" text-anchor="middle">FACTION</text>
+    <line x1="720" y1="20" x2="720" y2="80" class="border-sub" />
+    <text x="800" y="56" class="header-text" text-anchor="middle">ROLE:</text>
+    <line x1="900" y1="20" x2="900" y2="80" class="border-sub" />
+    <text x="1020" y="56" class="header-text" text-anchor="middle">LEVELS:</text>
+
+    <!-- Sheet / Faction Info Box -->
+    <rect x="1260" y="20" width="320" height="60" class="header-bar" />
+    <text x="1270" y="40" class="text-sub">SHEET:</text>
+    <text x="1270" y="65" class="text-sub">FACTION</text>
+  </g>
+
+  <!-- ==================== LEFT COLUMN ==================== -->
+  <g id="left-column">
+    <!-- Main Full Concept/Hero Box -->
+    <rect x="20" y="80" width="550" height="660" class="border-panel" />
+
+    <!-- Scale Reference Box -->
+    <rect x="20" y="740" width="260" height="240" class="border-panel" />
+    <rect x="20" y="740" width="260" height="25" class="panel-header-fill" />
+    <text x="30" y="757" class="text-title">SCALE REFERENCE</text>
+  </g>
+
+  <!-- ==================== CENTER COLUMN ==================== -->
+  <g id="center-column">
+    <!-- Orthographic Views Panel -->
+    <rect x="570" y="80" width="430" height="400" class="border-panel" />
+    <rect x="570" y="80" width="430" height="25" class="panel-header-fill" />
+    <text x="580" y="97" class="text-title">ORTHOGRAPHIC VIEWS</text>
+    <!-- Turnaround Sub-labels -->
+    <text x="640" y="465" class="text-sub" text-anchor="middle">FRONT</text>
+    <text x="785" y="465" class="text-sub" text-anchor="middle">SIDE</text>
+    <text x="930" y="465" class="text-sub" text-anchor="middle">BACK</text>
+
+    <!-- Expressions / Action Poses -->
+    <rect x="570" y="480" width="250" height="260" class="border-panel" />
+    <rect x="570" y="480" width="250" height="25" class="panel-header-fill" />
+    <text x="580" y="497" class="text-title">EXPRESSIONS / ACTION POSES</text>
+
+    <!-- Material Colors (Palette Grid) -->
+    <rect x="820" y="480" width="180" height="260" class="border-panel" />
+    <rect x="820" y="480" width="180" height="25" class="panel-header-fill" />
+    <text x="830" y="497" class="text-title">MATERIAL COLORS</text>
+    <!-- 2x4 Color Swatches -->
+    <g id="color-swatches">
+      <!-- Row 1 -->
+      <rect x="835" y="520" width="35" height="75" class="border-sub" />
+      <rect x="875" y="520" width="35" height="75" class="border-sub" />
+      <rect x="915" y="520" width="35" height="75" class="border-sub" />
+      <rect x="955" y="520" width="35" height="75" class="border-sub" />
+      <!-- Row 2 -->
+      <rect x="835" y="610" width="35" height="75" class="border-sub" />
+      <rect x="875" y="610" width="35" height="75" class="border-sub" />
+      <rect x="915" y="610" width="35" height="75" class="border-sub" />
+      <rect x="955" y="610" width="35" height="75" class="border-sub" />
+    </g>
+
+    <!-- Faction Context -->
+    <rect x="280" y="740" width="720" height="240" class="border-panel" />
+    <rect x="280" y="740" width="720" height="25" class="panel-header-fill" />
+    <text x="290" y="757" class="text-title">FACTION CONTEXT</text>
+  </g>
+
+  <!-- ==================== RIGHT COLUMN ==================== -->
+  <g id="right-column">
+    <!-- Components / Gear Breakdown -->
+    <rect x="1000" y="80" width="580" height="400" class="border-panel" />
+    <rect x="1000" y="80" width="580" height="25" class="panel-header-fill" />
+    <text x="1010" y="97" class="text-title">COMPONENTS / GEAR BREAKDOWN</text>
+    
+    <!-- 3x4 Grid for Gear/Assets -->
+    <g id="gear-grid">
+      <!-- Row 1 -->
+      <rect x="1020" y="120" width="125" height="80" class="border-sub" />
+      <rect x="1155" y="120" width="125" height="80" class="border-sub" />
+      <rect x="1290" y="120" width="125" height="80" class="border-sub" />
+      <rect x="1425" y="120" width="125" height="80" class="border-sub" />
+      <!-- Row 2 -->
+      <rect x="1020" y="210" width="125" height="80" class="border-sub" />
+      <rect x="1155" y="210" width="125" height="80" class="border-sub" />
+      <rect x="1290" y="210" width="125" height="80" class="border-sub" />
+      <rect x="1425" y="210" width="125" height="80" class="border-sub" />
+      <!-- Row 3 -->
+      <rect x="1020" y="300" width="125" height="80" class="border-sub" />
+      <rect x="1155" y="300" width="125" height="80" class="border-sub" />
+      <rect x="1290" y="300" width="125" height="80" class="border-sub" />
+      <rect x="1425" y="300" width="125" height="80" class="border-sub" />
+    </g>
+
+    <!-- Assembly Key -->
+    <rect x="1000" y="480" width="580" height="500" class="border-panel" />
+    <rect x="1000" y="480" width="580" height="25" class="panel-header-fill" />
+    <text x="1010" y="497" class="text-title">ASSEMBLY KEY</text>
+    <!-- Internal Dividers for Assembly Key -->
+    <line x1="1440" y1="505" x2="1440" y2="980" class="border-sub" />
+    <line x1="1000" y1="740" x2="1440" y2="740" class="border-sub" />
+  </g>
+</svg>

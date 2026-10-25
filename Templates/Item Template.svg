@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <!-- Background Grid Pattern -->
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#E5E7EB" stroke-width="0.75" />
+    </pattern>
+    <style>
+      .border { stroke: #000000; stroke-width: 1.5; fill: none; }
+      .thick-border { stroke: #000000; stroke-width: 2; fill: none; }
+      .header-fill { fill: #F3F4F6; stroke: #000000; stroke-width: 1.5; }
+      .card-fill { fill: #FFFFFF; stroke: #000000; stroke-width: 1.25; }
+      .title-text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; font-size: 11px; fill: #111827; letter-spacing: 0.08em; text-transform: uppercase; }
+      .sub-text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; font-size: 9px; fill: #6B7280; letter-spacing: 0.04em; }
+      .box-label { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; font-size: 8.5px; fill: #4B5563; }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1600" height="1000" fill="#FFFFFF" />
+  <rect width="1600" height="1000" fill="url(#grid)" />
+
+  <!-- Outer Frame -->
+  <rect x="15" y="15" width="1570" height="970" class="thick-border" />
+
+  <!-- ==================================================================== -->
+  <!-- TOP HEADER BAR                                                       -->
+  <!-- ==================================================================== -->
+  <rect x="15" y="15" width="700" height="42" class="header-fill" />
+  <text x="30" y="32" class="title-text">ASSET / PROP SPECIFICATION SHEET</text>
+  <text x="30" y="47" class="sub-text">ASSET NAME / ID: _____________________________________________</text>
+
+  <rect x="715" y="15" width="220" height="42" class="header-fill" />
+  <text x="727" y="32" class="title-text">SET / BIOME</text>
+  <text x="727" y="47" class="sub-text">ENVIRONMENT / PROP</text>
+
+  <rect x="935" y="15" width="350" height="42" class="header-fill" />
+  <text x="947" y="32" class="title-text">BOUNDS & SCALE</text>
+  <text x="947" y="47" class="sub-text">DIMENSIONS: [ X ___ × Y ___ × Z ___ STUDS ]</text>
+
+  <rect x="1285" y="15" width="300" height="42" class="header-fill" />
+  <text x="1297" y="32" class="title-text">TARGET BUDGET</text>
+  <text x="1297" y="47" class="sub-text">TRIS: < ________ | TEX: ________</text>
+
+  <!-- ==================================================================== -->
+  <!-- 1. HERO VIEW (PRIMARY ISOMETRIC / IN-GAME ANGLE)                    -->
+  <!-- ==================================================================== -->
+  <!-- Header -->
+  <rect x="15" y="57" width="545" height="24" class="header-fill" />
+  <text x="25" y="73" class="title-text">01. HERO / ISOMETRIC 3/4 VIEW</text>
+  <!-- Content Panel -->
+  <rect x="15" y="81" width="545" height="649" class="card-fill" />
+  <text x="287" y="415" class="sub-text" text-anchor="middle">[ PRIMARY BEAUTY RENDER / ASSEMBLED ANGLE ]</text>
+
+  <!-- ==================================================================== -->
+  <!-- 2. ORTHOGRAPHIC MODELING VIEWS (FRONT / SIDE / TOP)                  -->
+  <!-- ==================================================================== -->
+  <!-- Header -->
+  <rect x="560" y="57" width="420" height="24" class="header-fill" />
+  <text x="570" y="73" class="title-text">02. ORTHOGRAPHIC ALIGNMENT (FRONT / SIDE / TOP)</text>
+  <!-- Content Panel -->
+  <rect x="560" y="81" width="420" height="395" class="card-fill" />
+  <!-- Internal alignment dividing guides -->
+  <line x1="560" y1="212" x2="980" y2="212" stroke="#E5E7EB" stroke-dasharray="4 4" stroke-width="1" />
+  <line x1="560" y1="344" x2="980" y2="344" stroke="#E5E7EB" stroke-dasharray="4 4" stroke-width="1" />
+  <text x="575" y="105" class="box-label">FRONT</text>
+  <text x="575" y="235" class="box-label">SIDE PROFILE</text>
+  <text x="575" y="367" class="box-label">TOP / ROOF PLAN</text>
+
+  <!-- ==================================================================== -->
+  <!-- 3. COMPONENT / HARDWARE / TRIM CALLOUTS (12 BOXES)                   -->
+  <!-- ==================================================================== -->
+  <!-- Header -->
+  <rect x="980" y="57" width="605" height="24" class="header-fill" />
+  <text x="990" y="73" class="title-text">03. COMPONENT & MATERIAL DETAILS (ATTACHMENTS / TRIMS)</text>
+  <!-- Content Panel Outer -->
+  <rect x="980" y="81" width="605" height="395" class="card-fill" />
+  
+  <!-- 12 Detail Boxes (4 Cols x 3 Rows) -->
+  <!-- Row 1 -->
+  <rect x="995" y="96" width="132" height="105" class="card-fill" />
+  <text x="1003" y="112" class="box-label">01. HARDWARE / FIXTURE</text>
+  
+  <rect x="1142" y="96" width="132" height="105" class="card-fill" />
+  <text x="1150" y="112" class="box-label">02. SURFACE DETAIL</text>
+  
+  <rect x="1289" y="96" width="132" height="105" class="card-fill" />
+  <text x="1297" y="112" class="box-label">03. TRIM / EDGE BEVEL</text>
+  
+  <rect x="1436" y="96" width="134" height="105" class="card-fill" />
+  <text x="1444" y="112" class="box-label">04. ACCENT / EMBLEM</text>
+
+  <!-- Row 2 -->
+  <rect x="995" y="213" width="132" height="105" class="card-fill" />
+  <text x="1003" y="229" class="box-label">05. WEATHERING / WEAR</text>
+  
+  <rect x="1142" y="213" width="132" height="105" class="card-fill" />
+  <text x="1150" y="229" class="box-label">06. FASTENERS / SEAMS</text>
+  
+  <rect x="1289" y="213" width="132" height="105" class="card-fill" />
+  <text x="1297" y="229" class="box-label">07. SECONDARY PROP</text>
+  
+  <rect x="1436" y="213" width="134" height="105" class="card-fill" />
+  <text x="1444" y="229" class="box-label">08. DECAL / SIGNAGE</text>
+
+  <!-- Row 3 -->
+  <rect x="995" y="330" width="132" height="105" class="card-fill" />
+  <text x="1003" y="346" class="box-label">09. INTERIOR / CAVITY</text>
+  
+  <rect x="1142" y="330" width="132" height="105" class="card-fill" />
+  <text x="1150" y="346" class="box-label">10. JOINT / HINGE</text>
+  
+  <rect x="1289" y="330" width="132" height="105" class="card-fill" />
+  <text x="1297" y="346" class="box-label">11. GLASS / EMISSIVE</text>
+  
+  <rect x="1436" y="330" width="134" height="105" class="card-fill" />
+  <text x="1444" y="346" class="box-label">12. BASE / FOOTING</text>
+
+  <!-- ==================================================================== -->
+  <!-- 4. SCALE REFERENCE & GROUND CONTACT                                  -->
+  <!-- ==================================================================== -->
+  <!-- Header -->
+  <rect x="560" y="476" width="240" height="24" class="header-fill" />
+  <text x="570" y="492" class="title-text">04. AVATAR SCALE COMPARISON</text>
+  <!-- Content Panel -->
+  <rect x="560" y="500" width="240" height="230" class="card-fill" />
+  <!-- Ground contact line -->
+  <line x1="575" y1="695" x2="785" y2="695" stroke="#000000" stroke-width="1.5" />
+  <text x="680" y="590" class="sub-text" text-anchor="middle">[ ASSET VS 5-STUD PLAYER ]</text>
+  <text x="680" y="715" class="box-label" text-anchor="middle">GROUND CONTACT PLANE</text>
+
+  <!-- ==================================================================== -->
+  <!-- 5. COLOR PALETTE & MATERIAL FINISHES (8 SWATCHES)                   -->
+  <!-- ==================================================================== -->
+  <!-- Header -->
+  <rect x="800" y="476" width="180" height="24" class="header-fill" />
+  <text x="810" y="492" class="title-text">05. PALETTE & FINISHES</text>
+  <!-- Content Panel Outer -->
+  <rect x="800" y="500" width="180" height="230" class="card-fill" />
+
+  <!-- 8 Swatches (4 Cols x 2 Rows) -->
+  <!-- Row 1 -->
+  <rect x="812" y="515" width="32" height="70" class="card-fill" />
+  <text x="828" y="600" class="box-label" text-anchor="middle">P1</text>
+  <rect x="852" y="515" width="32" height="70" class="card-fill" />
+  <text x="868" y="600" class="box-label" text-anchor="middle">P2</text>
+  <rect x="892" y="515" width="32" height="70" class="card-fill" />
+  <text x="908" y="600" class="box-label" text-anchor="middle">P3</text>
+  <rect x="932" y="515" width="32" height="70" class="card-fill" />
+  <text x="948" y="600" class="box-label" text-anchor="middle">P4</text>
+
+  <!-- Row 2 -->
+  <rect x="812" y="618" width="32" height="70" class="card-fill" />
+  <text x="828" y="703" class="box-label" text-anchor="middle">M1</text>
+  <rect x="852" y="618" width="32" height="70" class="card-fill" />
+  <text x="868" y="703" class="box-label" text-anchor="middle">M2</text>
+  <rect x="892" y="618" width="32" height="70" class="card-fill" />
+  <text x="908" y="703" class="box-label" text-anchor="middle">M3</text>
+  <rect x="932" y="618" width="32" height="70" class="card-fill" />
+  <text x="948" y="703" class="box-label" text-anchor="middle">M4</text>
+
+  <!-- ==================================================================== -->
+  <!-- 6. VARIANTS, STATES & INTERACTION STATES                             -->
+  <!-- ==================================================================== -->
+  <!-- Header -->
+  <rect x="980" y="476" width="440" height="24" class="header-fill" />
+  <text x="990" y="492" class="title-text">06. FUNCTIONAL STATES / VARIANTS (OPEN, BROKEN, ACTIVE)</text>
+  <!-- Content Panel -->
+  <rect x="980" y="500" width="440" height="230" class="card-fill" />
+  <line x1="1200" y1="500" x2="1200" y2="730" stroke="#E5E7EB" stroke-dasharray="4 4" stroke-width="1" />
+  <text x="1090" y="610" class="sub-text" text-anchor="middle">[ STATE A: DEFAULT / IDLE ]</text>
+  <text x="1310" y="610" class="sub-text" text-anchor="middle">[ STATE B: ACTIVE / OPEN / DAMAGED ]</text>
+
+  <!-- ==================================================================== -->
+  <!-- 7. MODULAR SOCKETS & SNAP POINTS                                    -->
+  <!-- ==================================================================== -->
+  <!-- Header -->
+  <rect x="1420" y="476" width="165" height="24" class="header-fill" />
+  <text x="1430" y="492" class="title-text">07. SNAP SOCKETS</text>
+  <!-- Content Panel -->
+  <rect x="1420" y="500" width="165" height="230" class="card-fill" />
+  <text x="1502" y="590" class="sub-text" text-anchor="middle">[ ATTACHMENT ]</text>
+  <text x="1502" y="610" class="sub-text" text-anchor="middle">[ PIVOTS & WELDS ]</text>
+
+  <!-- ==================================================================== -->
+  <!-- 8. COLLISION MESH & HITBOX GEOMETRY                                  -->
+  <!-- ==================================================================== -->
+  <!-- Header -->
+  <rect x="15" y="730" width="245" height="24" class="header-fill" />
+  <text x="25" y="746" class="title-text">08. COLLISION / HITBOX HULL</text>
+  <!-- Content Panel -->
+  <rect x="15" y="754" width="245" height="231" class="card-fill" />
+  <text x="137" y="865" class="sub-text" text-anchor="middle">[ CANCOLLIDE / SIMPLIFIED HULL ]</text>
+
+  <!-- ==================================================================== -->
+  <!-- 9. EXPLODED / ASSEMBLY BREAKDOWN KEY                                -->
+  <!-- ==================================================================== -->
+  <!-- Header -->
+  <rect x="260" y="730" width="720" height="24" class="header-fill" />
+  <text x="270" y="746" class="title-text">09. MODULAR ASSEMBLY KEY (SUB-MESH PIECES & INSTANCING)</text>
+  <!-- Content Panel -->
+  <rect x="260" y="754" width="720" height="231" class="card-fill" />
+  <text x="620" y="865" class="sub-text" text-anchor="middle">[ EXPLODED VIEW / DETACHABLE SUB-MESHES / DRAW CALL BATCHING ]</text>
+
+  <!-- ==================================================================== -->
+  <!-- 10. TECHNICAL ENGINE SPECIFICATIONS                                 -->
+  <!-- ==================================================================== -->
+  <!-- Header -->
+  <rect x="980" y="730" width="605" height="24" class="header-fill" />
+  <text x="990" y="746" class="title-text">10. TECHNICAL ASSET SPECIFICATIONS & ENGINE FLAGS</text>
+  <!-- Content Panel -->
+  <rect x="980" y="754" width="605" height="231" class="card-fill" />
+
+  <!-- Technical Spec Checklist / Field Grid -->
+  <text x="1005" y="785" class="box-label">PIVOT POINT ORIGIN: [   ] CENTER BASE   [   ] CENTER MASS   [   ] SOCKET SNAP</text>
+  <text x="1005" y="815" class="box-label">COLLISION FIDELITY:  [   ] DEFAULT (BOX) [   ] HULL           [   ] PRECISE CONVEX</text>
+  <text x="1005" y="845" class="box-label">SURFACE TEXTURING:   [   ] PBR SURFACE   [   ] VERTEX COLOR   [   ] TRIM SHEET</text>
+  <text x="1005" y="875" class="box-label">INTERACTION TYPE:    [   ] STATIC PROP   [   ] CLICK/PROX     [   ] DESTRUCTIBLE</text>
+  <text x="1005" y="905" class="box-label">LEVEL OF DETAIL:     [   ] LOD0 MAIN     [   ] LOD1 REDUCED   [   ] STREAMING MESH</text>
+  
+  <line x1="995" y1="925" x2="1570" y2="925" stroke="#E5E7EB" stroke-width="1" />
+  <text x="1005" y="955" class="box-label">PRODUCTION NOTES / SHADER FLAGS: ___________________________________________________________</text>
+</svg>
